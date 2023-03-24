@@ -272,14 +272,9 @@ inline bool NucleonCommon::participate(NucleonData& A, NucleonData& B) const {
 
   // Sample one random number and decide if this pair participates.
   if (one_minus_prob < random::canonical<double>()) {
-    if(0.68< random::canonical<double>()){
-      return false;
-    }
-    else{
     set_participant(A);
     set_participant(B);
     return true;
-    }
   }
 
   return false;
